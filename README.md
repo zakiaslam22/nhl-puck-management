@@ -46,26 +46,40 @@ python src/data/process.py
 - Ottawa, Vegas and Montreal rank highest at the team level
 
 ## Project Structure
+
+```
 nhl-puck-management/
-
-├── data/
-
-│   ├── raw/          # raw NHL API JSON (not committed)
-
-│   └── processed/    # clean CSVs
-
-├── notebooks/        # analysis notebooks
-
-├── src/              # Python scripts
-
-│   ├── data/         # fetch and process scripts
-
-├── outputs/          # charts and visualizations
-
+│
+├── README.md
 ├── environment.yml
-
-└── README.md
-
+│
+├── data/
+│   ├── raw/                               # not tracked in git
+│   │   └── .gitkeep                       # placeholder — run fetch.py to populate
+│   └── processed/
+│       ├── events.csv                     # flattened NHL API play-by-play events
+│       ├── skaters.csv                    # MoneyPuck 5on5 skater data
+│       ├── player_giveaways.csv           # giveaway above expected scores
+│       └── final_rankings.csv             # final composite puck management scores
+│
+├── notebooks/
+│   ├── 01_eda.ipynb                       # exploratory data analysis
+│   ├── 02_model.ipynb                     # xGoal and above expected models
+│   ├── 03_scoring.ipynb                   # composite score and rankings
+│   └── 04_visualizations.ipynb            # charts for LinkedIn and Quarto
+│
+├── src/
+│   ├── data/
+│   │   ├── fetch.py                       # pulls all 1,312 games from NHL API
+│   │   └── process.py                     # flattens raw JSON into events dataframe
+│   ├── features/
+│   └── viz/
+│
+└── outputs/
+    ├── top20_puck_managers.png
+    ├── bottom20_puck_managers.png
+    └── team_puck_management.png
+```
 
 ## Credits
 
