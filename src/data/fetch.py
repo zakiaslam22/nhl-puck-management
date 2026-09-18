@@ -75,3 +75,4 @@ def fetch_all_games():
 
 if __name__ == "__main__":
     fetch_all_games()
+
