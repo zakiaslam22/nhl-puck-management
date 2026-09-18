@@ -70,6 +70,10 @@ Run the notebooks in order (`01` through `04`). `fetch.py` requires no API key b
 - [NHL API](https://api-web.nhle.com): play-by-play event data
 - [MoneyPuck](https://moneypuck.com): season-level skater statistics
 
+## Acknowledgments
+
+Much of the code and writing for this project, including the modeling, scoring pipeline, visualizations, and parts of the accompanying write-up, was developed with the assistance of Claude AI.
+
 ## License
 
 See [LICENSE](LICENSE).
